@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: customer
+      POSTGRES_USER: wayerz
+      POSTGRES_PASSWORD: wayerz-pass
+      PGPORT: 5431
+    ports:
+      - "5431:5431"
+    restart: unless-stopped
